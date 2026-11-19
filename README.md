@@ -39,3 +39,7 @@ GMV, net revenue at the 18% take rate, bookings and active pros over 7, 30 or 90
 Each surface is a single HTML file with no framework or build step. Photos come from [Unsplash](https://unsplash.com). `scripts/build_site.py` generates the trilingual case page. Screenshots in `docs/` were rendered with headless Chrome.
 
 Built by [Wendel Freitas](https://www.wendelfreitas.com) with Claude.
+
+## Deploy notes
+- `site/case.html` → `public_html/al-socio/case.html`, served at `/cases/al-socio` by `deploy/cases/.htaccess` (placed at `public_html/cases/.htaccess`; all other `/cases/*` routes fall back to the site app).
+- `app/` and `ops/` → `public_html/al-socio/app/` and `/ops/` (embedded by the case page). `/al-socio/` redirects to `/cases/al-socio`.

@@ -1,0 +1,8 @@
+# /cases/al-socio -> merged Al Socio case page (both live prototypes)
+# every other /cases route falls back to the site app, as before
+DirectorySlash Off
+DirectoryIndex /index.html
+RewriteEngine On
+RewriteRule ^al-socio/?$ /al-socio/case.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ /index.html [L]

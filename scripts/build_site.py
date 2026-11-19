@@ -7,6 +7,7 @@ C={
 'eyebrow':['Two-sided marketplace · iOS app + ops platform · Miami','Marketplace de dos lados · app iOS + plataforma de operaciones · Miami','Marketplace de dois lados · app iOS + plataforma de operações · Miami'],
 'lede':['Home services in Miami run on WhatsApp and word of mouth. Al Socio gives it structure: verified, licensed pros with upfront prices, booking in three taps, live tracking and a neighbourhood community, in English and Spanish from day one.','Los servicios del hogar en Miami funcionan por WhatsApp y recomendaciones. Al Socio les da estructura: profesionales verificados y con licencia, precios por adelantado, reserva en tres toques, seguimiento en vivo y una comunidad de vecinos, en inglés y español desde el primer día.','Os serviços residenciais em Miami funcionam por WhatsApp e indicação. O Al Socio dá estrutura a isso: profissionais verificados e licenciados, preço antecipado, reserva em três toques, rastreamento ao vivo e uma comunidade de vizinhos, em inglês e espanhol desde o primeiro dia.'],
 'b1':['Try the app ↓','Prueba la app ↓','Teste o app ↓'],'b2':['Open full screen ↗','Abrir en pantalla completa ↗','Abrir em tela cheia ↗'],'b3':['View the code ↗','Ver el código ↗','Ver o código ↗'],
+'k1':['Role','Rol','Papel'],'k1v':['Founder, product & growth lead','Fundador, producto y crecimiento','Fundador, produto e growth'],'k2':['Category','Categoría','Categoria'],'k2v':['Two-sided marketplace','Marketplace de dos lados','Marketplace de dois lados'],'k3':['Market','Mercado','Mercado'],'k3v':['Miami metro, bilingual EN-ES','Miami, bilingüe EN-ES','Miami, bilíngue EN-ES'],'k4':['Surfaces','Superficies','Superfícies'],'k4v':['Customer iOS app · ops platform','App iOS para clientes · plataforma de operaciones','App iOS do cliente · plataforma de operações'],'k5':['Stage','Etapa','Estágio'],'k5v':['Interactive prototype, pre-launch','Prototipo interactivo, prelanzamiento','Protótipo interativo, pré-lançamento'],
 'f1':['Core screens','Pantallas principales','Telas principais'],'f2':['Take rate','Comisión','Comissão'],'f3':['Days at 0% for new pros','Días al 0% para nuevos socios','Dias a 0% para novos profissionais'],'f4':['Languages, EN · ES','Idiomas, EN · ES','Idiomas, EN · ES'],
 'pe':['The problem','El problema','O problema'],
 'ph':['Finding a pro you can trust still takes three group chats.','Encontrar un profesional de confianza todavía requiere tres chats grupales.','Achar um profissional de confiança ainda exige três grupos de WhatsApp.'],
@@ -63,16 +64,18 @@ lst=''.join(f'<div><span class="num">0{i}</span><h3 data-t="w{i}">{C[f"w{i}"][0]
 mets=''.join(f'<span data-t="m{i}">{C[f"m{i}"][0]}</span>' for i in range(1,7))
 css=open('/tmp/wl-case.html').read().split('<style>')[1].split('</style>')[0]
 css=css.replace('--lime:#c8f135','--lime:#c8f135;--as:#FF6B5B').replace('rgba(255,107,107,.12)','rgba(255,107,91,.14)')
-css+='''.thumbs{grid-template-columns:repeat(5,minmax(0,1fr))}.th.wide img{aspect-ratio:240/519;object-position:left top}
+css+='''.meta{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:24px 0 0}.meta div{background:var(--panel);padding:16px 18px}.meta span{display:block;font:500 10.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:6px}.meta b{font-weight:500;font-size:14px;color:#d9d9d4}
+@media(max-width:820px){.meta{grid-template-columns:1fr 1fr}}
+.thumbs{grid-template-columns:repeat(5,minmax(0,1fr))}.th.wide img{aspect-ratio:240/519;object-position:left top}
 .stage.wide img{aspect-ratio:1440/960;border-radius:14px}
 .ops{margin-top:28px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#070B16;height:720px}.ops iframe{width:100%;height:100%;border:0;display:block}
 .device{background:#151c2c}.device iframe{background:#0A1020}
 @media(max-width:820px){.thumbs{grid-template-columns:repeat(5,minmax(0,1fr))}.ops{height:760px}}'''
-html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+html=f'''<!doctype html><html lang="en" data-as-static="1"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{C['title'][0]}</title>
 <meta name="description" content="Al Socio is a bilingual home-services marketplace for Miami: verified pros, upfront prices, three-tap booking, live tracking, a neighbourhood community and an operator command centre.">
 <meta property="og:title" content="Al Socio — Home services marketplace case study"><meta property="og:description" content="Verified pros, upfront prices, booking, tracking and community. Customer app + ops command centre, EN/ES."><meta property="og:image" content="{R}cover.jpg">
-<link rel="canonical" href="https://www.wendelfreitas.com/al-socio/">
+<link rel="canonical" href="https://www.wendelfreitas.com/cases/al-socio">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>{css}</style></head><body>
@@ -85,6 +88,7 @@ html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <p class="lede">{t('lede')}</p>
 <div class="btns"><a class="btn p" href="#try">{t('b1')}</a><a class="btn" href="/al-socio/app/" target="_blank" rel="noopener">{t('b2')}</a><a class="btn" href="https://github.com/wendel-crypto/al-socio" target="_blank" rel="noopener">{t('b3')}</a></div>
 <div class="cover"><img src="{R}cover.jpg" alt="Al Socio customer app screens and operator dashboard"></div>
+<div class="meta">''' + ''.join(f'<div><span data-t="k{i}">{C[f"k{i}"][0]}</span><b data-t="k{i}v">{C[f"k{i}v"][0]}</b></div>' for i in range(1,6)) + f'''</div>
 <div class="facts"><div><b>12</b>{t('f1')}</div><div><b>18%</b>{t('f2')}</div><div><b>90</b>{t('f3')}</div><div><b>2</b>{t('f4')}</div></div>
 </div>
 <section><div class="wrap two"><div><p class="eyebrow">{t('pe')}</p><h2>{t('ph')}</h2></div><div><p>{t('p1')}</p><p>{t('p2')}</p><p>{t('p3')}</p></div></div></section>
@@ -127,6 +131,6 @@ new MutationObserver(applyLang).observe(document.documentElement,{{attributes:tr
 document.querySelectorAll('#jump button').forEach(b=>b.onclick=()=>{{document.querySelectorAll('#jump button').forEach(x=>x.classList.toggle('on',x===b));fr.contentWindow.postMessage({{as:'go',v:b.dataset.go}},'*')}});
 applyLang();
 </script>
-<script src="/wf-site.v8.js" defer></script></body></html>'''
-pathlib.Path('/home/claude/al-socio/site/index.html').write_text(html,encoding='utf-8')
+<script src="/wf-site.v9.js" defer></script></body></html>'''
+pathlib.Path('/home/claude/al-socio/site/case.html').write_text(html,encoding='utf-8')
 print(len(html))

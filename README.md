@@ -4,13 +4,13 @@
 
 Al Socio is a bilingual (EN/ES) two-sided marketplace for home services in Miami: verified, licensed pros with upfront prices, booking in three taps, live job tracking and a neighbourhood community. This repo has interactive prototypes of both sides of the marketplace.
 
-**Live case study:** https://www.wendelfreitas.com/al-socio/
+**Live case study:** https://www.wendelfreitas.com/cases/al-socio
 
 | | Path | Live |
 |---|---|---|
 | Customer app (iOS-style, EN/ES) | [`app/index.html`](app/index.html) | [/al-socio/app/](https://www.wendelfreitas.com/al-socio/app/) |
 | Operator command centre | [`ops/index.html`](ops/index.html) | [/al-socio/ops/](https://www.wendelfreitas.com/al-socio/ops/) |
-| Case-study page (EN/ES/PT) | [`site/index.html`](site/index.html) | [/al-socio/](https://www.wendelfreitas.com/al-socio/) |
+| Case-study page (EN/ES/PT) | [`site/case.html`](site/case.html) | [/cases/al-socio](https://www.wendelfreitas.com/cases/al-socio) |
 
 ![Al Socio](docs/cover.jpg)
 
